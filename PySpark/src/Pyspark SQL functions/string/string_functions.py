@@ -46,3 +46,4 @@ dff.select(lpad('id',5,'-')).show()
 dff.select(regexp_replace('name','Vegash','Vsh').alias('Updated')).show()
 
 dff.select(length('name')).show()
+dff.select(length('name').alias('len')).show()
