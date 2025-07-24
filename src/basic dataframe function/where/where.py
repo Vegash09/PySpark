@@ -9,9 +9,9 @@ data = [
     (4,'Kathir','Madurai')
 ]
 df = spark.createDataFrame(data,['id','name','location'])
-df.show()
-df.where("id == 1 AND location = 'Chennai'").show()
-df.where("location like 'C%'").show()
+#df.show()
+# df.where("id == 1 AND location = 'Chennai'").show()
+# df.where("location like 'C%'").show()
 
 df = df.withColumn('literals', lit('literals'))
 df = df.withColumn('literals', regexp_replace('literals', 'literals', 'lit'))
